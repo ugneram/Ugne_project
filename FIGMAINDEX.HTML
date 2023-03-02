@@ -226,13 +226,28 @@
         </div>
       </div>
     </div>
-
+<!--MODAL AND QUOTES-->
     <div class="button1 seeall">
     <button id="modalBtn" class="btn btn-primary">SEE ALL CAUSE</button>
     <div id="simpleModal" class="modal">
       <div class="modal-content">
         <span id="closeBtn">&times;</span>
-        <p>Find more information <a href="http://">HERE</a></p>
+
+        <div class="containermodal">
+         <h1>
+         <i class="fas fa-quote-left"></i>
+         <span class="quote" id="quote"></span>
+         <i class="fas fa-quote-right"></i>
+         </h1>
+         <p class="author" id="author"></p>
+
+         <hr/>
+         <div class="buttons">
+
+             <button class="next" onclick="getNewQuote()">Next quote</button>
+         </div>
+     </div>
+
       </div>
     </div>
   </div>
@@ -621,6 +636,49 @@ const closeBtn = document.getElementById('closeBtn');
 
 modalBtn.addEventListener('click', (event) => {   modal.style.display = "block"; });  
 closeBtn.addEventListener('click', (event) => {   modal.style.display = "none"; })
+
+</script>
+
+<script>
+const text=document.getElementById("quote");
+const author=document.getElementById("author");
+const tweetButton=document.getElementById("tweet");
+
+const getNewQuote = async () =>
+{
+    //api for quotes
+    var url="https://type.fit/api/quotes";    
+
+    // fetch the data from api
+    const response=await fetch(url);
+    console.log(typeof response);
+    //convert response to json and store it in quotes array
+    const allQuotes = await response.json();
+
+    // Generates a random number between 0 and the length of the quotes array
+    const indx = Math.floor(Math.random()*allQuotes.length);
+
+    //Store the quote present at the randomly generated index
+    const quote=allQuotes[indx].text;
+
+    //Store the author of the respective quote
+    const auth=allQuotes[indx].author;
+
+    if(auth==null)
+    {
+        author = "Anonymous";
+    }
+
+    //function to dynamically display the quote and the author
+    text.innerHTML=quote;
+    author.innerHTML="~ "+auth;
+
+    //tweet the quote
+    tweetButton.href="https://twitter.com/intent/tweet?text="+quote+" ~ "+auth;
+}
+getNewQuote();
+
+congrats.gif
 
 </script>
 
