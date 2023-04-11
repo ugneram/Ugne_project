@@ -604,8 +604,9 @@ justify-content: center;
 
 .paragraphend {
     font-weight: bold;
-    font-size: 23px;
+    font-size: 20px;
     font-style: normal; 
+    font-family: lora;
 
 }
 
@@ -638,7 +639,7 @@ ul {
 
 .footerend {
 background-color:#333333;
-height: 121px;
+height: 110px;
 text-decoration: none;
 
 }
