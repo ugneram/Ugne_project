@@ -25,9 +25,11 @@ body {
 .socmed a {
     padding:16px;
 }
+
 .socmed a:hover {
     background-color: rgb(83, 79, 79);
 }
+
 .logo-1 {
     width: 147px;
     height: 53px;
@@ -72,6 +74,14 @@ body {
     align-items: center;
     border-color: #FF7000;
 }
+
+.btn:hover {
+color:#333333;
+border: 2px solid #333333;
+}
+
+
+
 .logobar {
     height:100px;
     padding:20px;
@@ -408,6 +418,7 @@ justify-content: center;
 }
 
 
+
 .map-heading {
     font-family: 'Lora';
     font-style: normal;
@@ -450,12 +461,37 @@ justify-content: center;
     justify-content: center;
     padding-top: 40px;
 }
-.btn.mapone {
+
+
+.buttonwhite {
+    width: 165px;
+    height: 55px;
+    left: 1380px;
+    top: 82px;
+    border-radius: 8px;
     background-color: white !important;
     border-color: #FF7000;
     color:#FF7000;
     margin-right:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
+.buttonorange {
+    width: 165px;
+    height: 55px;
+    left: 1380px;
+    top: 82px;
+    border-radius: 8px;
+    background-color: #FF7000 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: #FF7000;
+}
+
 .ourvolunteerssay {
     height: 800px;
     width:100%;
@@ -544,11 +580,36 @@ justify-content: center;
     padding-bottom: 30px;
     padding-top:30px;
 }
+.ourgallery-line {
+    display: flex;
+    justify-content: center;
+    padding-top:20px;
+}
+.ourgallery-para {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #666666;
+    padding-top:34px;
+}
+.gallery-row {
+    padding-top:60px;
+    padding-bottom:70px;
+    justify-content: center;
+}
+
+.galleryimg {
+        width: 390px;
+        height: 300px;
+        margin: none;
+    }
+
 .ourgallery {
-    width: 100%;
-    height: 1124px;
     left: 0px;
-    top: 5909px;    
+    top: 5909px;
     background: #F1F1F1;
 }
 .ourgallery-heading {
@@ -566,32 +627,6 @@ justify-content: center;
     color: #FF7000;
     font-family: 'Lora'
 }
-.ourgallery-line {
-    display: flex;
-    justify-content: center;
-    padding-top:20px;
-}
-.ourgallery-para {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-    color: #666666;
-    padding-top:34px;
-}
-.gallery-row {
-    padding-top:80px
-}
-.ourgalerypic {
-    width: 370px;
-    height: 270px;
-    background: #333333;
-    opacity: 0.9;
-    margin:15px;
-}
-
 
 .bottombar {
     background-color: #FF7000;
@@ -619,23 +654,27 @@ justify-content: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-color: #FF7000;
-    border-radius: 8px;
+    border-radius: 10px;
     font-style: normal; 
 
 }
+
+.buttontwo:hover {
+    border: 2px solid #F8F8F8;
+    color: #FF7000;
+}
+
 
 .footerlink {
 color: white;
 font-style: normal; 
 text-decoration: none;
-
-
 }
 
 ul {
     list-style-type: none;
 }
+
 
 .footerend {
 background-color:#333333;
@@ -645,10 +684,11 @@ text-decoration: none;
 }
 
 .map-conttwo {
-background-image: url("/BOOTSTRAP/FIGMA/Dot\ Map.png");
-background-repeat: no-repeat;
-width: 100%;
-height: 100%;
+    background-image: url("Dot\ Map.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 639px;
+    
 }
 
 
