@@ -811,12 +811,6 @@ hr {
   box-shadow: 0 15px 15px #FF7000(230, 0, 0);
 }
 
-@media (max-width: 768px) {
-  .logobar {
-    display: none !important;
-  }
-}
-
 
 
 
@@ -884,3 +878,17 @@ hr {
   .login-form > input {
     margin-bottom: .5rem;
   }
+
+  @media (max-width: 1200px) {
+
+    .col-6.howto-picture { display: none; }
+    .paragraph {display: none;}
+  }
+
+  @media (max-width: 768px) {
+    .logobar {display:none; }
+  }
+
+  @media (max-width: 1200px) {
+  .ourvolunteerssay {display:block;}
+}
